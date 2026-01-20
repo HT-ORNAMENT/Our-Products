@@ -1,0 +1,161 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,system-ui,sans-serif;
+}
+
+html,body{
+  width:100%;
+  height:100%;
+  background:radial-gradient(circle at top,#111,#000 70%);
+  overflow:hidden;
+}
+
+/* ===== DNA BACKGROUND ===== */
+canvas{
+  position:fixed;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  filter:blur(6px);
+}
+
+.scene{
+  position:relative;
+  z-index:5;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding-top:60px;
+}
+
+/* ===== CARD ===== */
+.card-wrapper{
+  position:relative;
+  width:min(94vw,560px);
+  height:260px;
+}
+
+.card{
+  width:100%;
+  height:100%;
+  border-radius:26px;
+  padding:30px;
+  color:#f1f1f1;
+  background:linear-gradient(135deg,#0b0b0b,#111 45%,#050505 70%,#000);
+  box-shadow:
+    0 40px 90px rgba(0,0,0,.95),
+    inset 0 0 0 1px rgba(255,255,255,.25);
+}
+
+/* ===== TEXT FADE SYSTEM ===== */
+.card-content{
+  transition:opacity .6s ease;
+}
+
+.card-content.fade-out{
+  opacity:0;
+}
+
+.brand{
+  font-size:1.6rem;
+  font-weight:600;
+  letter-spacing:3px;
+}
+
+.tagline{
+  font-size:.9rem;
+  opacity:.75;
+  margin-bottom:16px;
+}
+
+.divider{
+  width:90px;
+  height:1px;
+  background:linear-gradient(90deg,#fff,transparent);
+  margin-bottom:16px;
+}
+
+.info span{
+  display:block;
+  font-size:.92rem;
+  line-height:1.8;
+  color:#e5e5e5;
+}
+
+/* ===== BUTTONS ===== */
+.location-btn{
+  margin-top:18px;
+  padding:10px 22px;
+  border-radius:24px;
+  background:#fff;
+  color:#000;
+  text-decoration:none;
+  font-size:.9rem;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.card-nav{
+  margin-top:16px;
+  display:flex;
+  gap:14px;
+}
+
+.card-nav button{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+  background:rgba(255,255,255,.15);
+  color:#fff;
+}
+
+/* ===== PRODUCT ===== */
+.product-zone{
+  margin-top:46px;
+  width:100%;
+  max-width:720px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:26px;
+}
+
+.product-side{
+  width:90px;
+  height:160px;
+  border-radius:18px;
+  background:#fff;
+  opacity:.35;
+  filter:blur(4px);
+}
+
+.product-main{
+  width:260px;
+  height:260px;
+  background:#fff;
+  border-radius:22px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#111;
+  box-shadow:0 30px 60px rgba(0,0,0,.45);
+  transition:transform .45s ease;
+}
+
+.product-main.animate{
+  transform:scale(.9) rotateY(20deg);
+}
+
+.product-main img{
+  width:120px;
+  height:120px;
+  object-fit:contain;
+  margin-bottom:12px;
+}
